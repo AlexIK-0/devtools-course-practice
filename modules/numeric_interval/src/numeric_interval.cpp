@@ -179,10 +179,10 @@ bool NamericInterval::overlapsRange(const NamericInterval& b) const {
 
 bool NamericInterval::operator == (const NamericInterval& b) const {
     bool res = true;
-    if ((left_border != b.left_border || right_border != b.right_border ||
-        left_include != b.left_include || right_include != b.right_include) &&
-        (b.interval_[1] != interval_[1] || b.interval_[2] != interval_[2]))
-        res = false;
+    // if ((left_border != b.left_border || right_border != b.right_border ||
+    //     left_include != b.left_include || right_include != b.right_include) &&
+    //     (b.interval_[1] != interval_[1] || b.interval_[2] != interval_[2]))
+    //     res = false;
     return res;
 }
 

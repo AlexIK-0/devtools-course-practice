@@ -92,7 +92,7 @@
 | [Правило 30](https://en.wikipedia.org/wiki/Rule_30) |||
 | [Вычисление скидок на книги](https://github.com/garora/TDD-Katas/blob/master/KatasReadme.md#harry-potter-) |||
 | [Перевод чисел в их словесное написание на английском](http://codingdojo.org/kata/NumbersInWords/) |||
-| [Работа с числовыми промежутками](http://codingdojo.org/kata/Range/) |||
+| [Работа с числовыми промежутками](http://codingdojo.org/kata/Range/) |Козлов Алексей 382006-3||
 | [Реализовать печать цифр в псевдографике](https://github.com/garora/TDD-Katas/blob/master/KatasReadme.md#lcd-digits-) |||
 | Поиск в тексте регулярных выражений (упрощенные) |||
 | [Ипотечный калькулятор](http://calculator-ipoteka.ru/calculator.php) |||

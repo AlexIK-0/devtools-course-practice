@@ -15,18 +15,18 @@ class NamericInterval {
 
     //
 
-    explicit NamericInterval(std::string str);
-    NamericInterval(const NamericInterval& obj);
+    // explicit NamericInterval(std::string str);
+    // NamericInterval(const NamericInterval& obj);
 
-    bool IntegerRangeContains(int* arr, int size);
-    std::string GetAllPoints();
-    bool ContainsRange(std::string str);
-    std::string EndPoints();
-    bool OverlapsRange(std::string str);
-    void SetFirst(int val);
-    void SetSecond(int val);
-    int GetFirst();
-    int GetSecond();
+    // bool IntegerRangeContains(int* arr, int size);
+    // std::string GetAllPoints();
+    // bool ContainsRange(std::string str);
+    // std::string EndPoints();
+    // bool OverlapsRange(std::string str);
+    // void SetFirst(int val);
+    // void SetSecond(int val);
+    // int GetFirst();
+    // int GetSecond();
     //
 
     std::vector<int> getBorderPoint() const;

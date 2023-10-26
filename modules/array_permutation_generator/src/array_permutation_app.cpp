@@ -68,13 +68,16 @@ std::string CLPApplication::operator()(int argc, const char **argv) {
     return "success";
   }
 
-  std::string CLPApplication::help() {
-    std::string help = "This program generates permutations";
-    return help;
-  }
-
-  std::string CLPApplication::argument_error() {
-    std::string error = "Invalid argument amount, try --help or -h commands";
-    return error;
-  }
+  return "success";
 }
+
+std::string CLPApplication::help() {
+  std::string help = "This program generates permutations";
+  return help;
+}
+
+std::string CLPApplication::argument_error() {
+  std::string error = "Invalid argument amount, try --help or -h commands";
+  return error;
+}
+

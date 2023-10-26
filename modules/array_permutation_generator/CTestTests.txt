@@ -51,3 +51,11 @@ add_test(
 set_tests_properties (${prefix}_test5 PROPERTIES
     PASS_REGULAR_EXPRESSION "Size: 120\nsuccess"
     LABELS "${MODULE}")
+
+add_test(
+    NAME ${prefix}_wrong_arg
+    COMMAND ${APPLICATION} --hhhh
+)
+set_tests_properties (${prefix}_wrong_arg PROPERTIES
+    PASS_REGULAR_EXPRESSION "success"
+    LABELS "${MODULE}")

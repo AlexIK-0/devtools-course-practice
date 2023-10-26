@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-#include "include/sort_facility_app.h"
+#include "include/array_permutation_app.h"
 
 int main(int argc, const char** argv) {
   CLPApplication app;

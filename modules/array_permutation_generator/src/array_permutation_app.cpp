@@ -7,8 +7,8 @@
 #include <utility>
 #include <vector>
 
-#include "include/array_permutations.h"
-#include "include/array_permutations_app.h"
+#include "include/array_permutation.h"
+#include "include/array_permutation_app.h"
 
 CLPApplication::CLPApplication() {}
 

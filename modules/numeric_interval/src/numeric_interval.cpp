@@ -9,14 +9,19 @@
 using std::vector;
 
 NumericInterval::NumericInterval()
-    : leftBorder(0), rightBorder(0), leftInclude(true), rightInclude(true) {}
+    : leftBorder(0),
+      rightBorder(0),
+      leftInclude(true),
+      rightInclude(true),
+      _interval(std::array<int, 4>()) {}
 
-NumericInterval::NumericInterval(int left_border_, int right_border_,
-                                 bool left_include_, bool right_include_)
-    : leftBorder(left_border_),
-      rightBorder(right_border_),
-      leftInclude(left_include_),
-      rightInclude(right_include_) {}
+NumericInterval::NumericInterval(int _leftBorder, int _rightBorder,
+                                 bool _leftInclude, bool _rightInclude)
+    : leftBorder(_leftBorder),
+      rightBorder(_rightBorder),
+      leftInclude(_leftInclude),
+      rightInclude(_rightInclude),
+      _interval(std::array<int, 4>()) {}
 
 std::vector<int> NumericInterval::getBorderPoint() const {
   int beginning = leftInclude ? leftBorder : leftBorder + 1;

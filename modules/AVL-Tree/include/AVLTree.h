@@ -93,7 +93,7 @@ bool AVLTree<TData>::containRecurse(AVLNode<TData>* node,
     if (node->value == value) {
       return true;
     } else if (value < node->value) {
-      return containRecurse(node->left, value);
+      // return containRecurse(node->left, value);
     } else if (value > node->value) {
       return containRecurse(node->right, value);
     }
@@ -168,9 +168,9 @@ const TData& AVLTree<TData>::find_min() const {
 
 template <typename TData>
 TData& AVLTree<TData>::recurse_find_min(AVLNode<TData>* node) const {
-  if (!node) {
-    throw std::invalid_argument("Tree is empty, no minimum value.");
-  }
+  // if (!node) {
+  //   throw std::invalid_argument("Tree is empty, no minimum value.");
+  // }
 
   if (node->left == nullptr) {
     return node->value;
@@ -185,9 +185,9 @@ const TData& AVLTree<TData>::find_max() const {
 
 template <typename TData>
 TData& AVLTree<TData>::recurse_find_max(AVLNode<TData>* node) const {
-  if (!node) {
-    throw std::invalid_argument("Tree is empty, no maximum value.");
-  }
+  // if (!node) {
+  //   throw std::invalid_argument("Tree is empty, no maximum value.");
+  // }
 
   if (node->right == nullptr) {
     return node->value;
@@ -277,14 +277,14 @@ void AVLTree<TData>::balance(AVLNode<TData>*(&node)) {
 
   if (factor < -1) {
     if (findHeight(node->right->right) >= findHeight(node->right->left)) {
-      node = singleLeftShift(node);
+      // node = singleLeftShift(node);
     } else {
       node->right = singleRightShift(node->right);
       node = singleLeftShift(node);
     }
   } else if (factor > 1) {
     if (findHeight(node->left->left) >= findHeight(node->left->right)) {
-      node = singleRightShift(node);
+      // node = singleRightShift(node);
     } else {
       node->left = singleLeftShift(node->left);
       node = singleRightShift(node);

@@ -1,0 +1,49 @@
+#############################################
+##### Testing
+#############################################
+
+set(prefix "${MODULE}")
+
+add_test(
+    NAME ${prefix}_can_Run_Application
+    COMMAND ${APPLICATION}
+)
+
+set_tests_properties (
+    ${prefix}_can_Run_Application PROPERTIES
+    LABELS "${MODULE}"
+)
+
+add_test(
+    NAME ${prefix}_can_bilinear_interpolation_1
+    COMMAND ${APPLICATION} 1 0 3 0 5 /n 2
+)
+
+set_tests_properties (
+    ${prefix}_can_bilinear_interpolation_1 PROPERTIES
+    PASS_REGULAR_EXPRESSION "12345"
+    LABELS "${MODULE}"
+)
+
+add_test(
+    NAME ${prefix}_can_bilinear_interpolation_2
+    COMMAND ${APPLICATION} 1 0 2 0 3 /n 0 0 0 0 0 /n 4 0 5 0 6 /n 0 0 0 0 0 /n 7 0 8 0 9 /n 0 0 0 0 0 /n 10 0 11 0 12 /n 2
+)
+
+set_tests_properties (
+    ${prefix}_can_bilinear_interpolation_2 PROPERTIES
+    PASS_REGULAR_EXPRESSION "12233344554556667788788999101011111011111212"
+    LABELS "${MODULE}"
+)
+
+add_test(
+    NAME ${prefix}_can_bilinear_interpolation_3
+    COMMAND ${APPLICATION} 1 0 3 0 5 /n 0 0 0 0 0 /n 3 0 5 0 7 /n 0 0 0 0 0 /n 5 0 7 0 9 /n 0 0 0 0 0 /n 7 0 9 0 11 /n 2
+)
+
+set_tests_properties (
+    ${prefix}_can_bilinear_interpolation_3 PROPERTIES
+    PASS_REGULAR_EXPRESSION "12345234563456745678567896789107891011"
+    LABELS "${MODULE}"
+)
+
